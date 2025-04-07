@@ -4,10 +4,6 @@ import { ThemeProvider } from './contexts/theme'
 import ThemeBtn from './components/ThemeBtn';
 import Card from './components/Card';
 
-import "tailwindcss/utilities"
-
-
-
 function App() {
   const [themeMode, setThemeMode] = useState("light");
 
