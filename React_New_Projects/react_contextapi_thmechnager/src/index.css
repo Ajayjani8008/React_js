@@ -1,5 +1,11 @@
 @import "tailwindcss";
+@import "tailwindcss/utilities";
 
+@layer utilities {
+  .dark {
+    color-scheme: dark;
+  }
+}
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

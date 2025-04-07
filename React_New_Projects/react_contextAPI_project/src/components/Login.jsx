@@ -7,6 +7,21 @@ function Login() {
 
     const { setUser } = useContext(UserContext);
 
+
+    // Important Note:
+
+    // UserContext.js
+    // 🧵 Creates the pipe	React.createContext() — defines the channel, but it's still empty
+
+
+    // UserContextProvider.jsx
+    // 💧 Injects data into the pipe	Uses < UserContext.Provider value = {{ user, setUser }}> to send the data
+
+
+    // useContext(UserContext)
+    // 🚰 Receives data from the pipe	Pulls data from whatever was injected by the provider
+    // and  give data to setUser function  
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setUser({ username, password });

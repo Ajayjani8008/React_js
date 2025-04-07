@@ -1,4 +1,13 @@
+@import "tailwindcss";
 
+@import "tailwindcss/utilities";
+
+
+@layer utilities {
+  .dark {
+    color-scheme: dark;
+  }
+}
 
 #root {
   max-width: 1280px;
@@ -28,6 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
