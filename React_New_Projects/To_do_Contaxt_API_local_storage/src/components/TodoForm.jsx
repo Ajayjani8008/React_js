@@ -10,7 +10,7 @@ function TodoForm() {
     e.preventDefault()
     if (!todo) return
 
-    addTodo({todo, completed: false })
+    addTodo({ todo, completed: false })
     setTodo("")
   }
 
@@ -20,7 +20,7 @@ function TodoForm() {
       <input
         type="text"
         placeholder="Write Todo..."
-        className="w-full border border-black/10 rounded-l-lg px-3 outline-none duration-150 bg-green/20 py-1.5"
+        className="w-full border border-white/10 rounded-l-lg px-4 outline-none duration-150 bg-green/20 py-2"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
       />

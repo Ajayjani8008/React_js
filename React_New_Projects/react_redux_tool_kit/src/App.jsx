@@ -8,25 +8,25 @@ function App() {
   const [editId, setEditId] = useState(null)
 
   return (
-    <div className="min-h-screen bg-gray-900 py-8">
-      <div className="max-w-2xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-white text-center mb-8">Redux Toolkit Todo App</h1>
-        <AddTodo
-          input={input}
-          setInput={setInput}
-          editMode={editMode}
-          editId={editId}
-          setEditMode={setEditMode}
-          setEditId={setEditId}
-        />
-        <Todos
-          setInput={setInput}
-          setEditMode={setEditMode}
-          setEditId={setEditId}
-        />
+      <div className="min-h-screen bg-gray-900 py-8">
+        <div className="max-w-2xl mx-auto px-4">
+          <h1 className="text-3xl font-bold text-white text-center mb-8">Redux Toolkit Todo App</h1>
+          <AddTodo
+            input={input}
+            setInput={setInput}
+            editMode={editMode}
+            editId={editId}
+            setEditMode={setEditMode}
+            setEditId={setEditId}
+          />
+          <Todos
+            setInput={setInput}
+            setEditMode={setEditMode}
+            setEditId={setEditId}
+          />
+        </div>
       </div>
-    </div>
-  )
+    )
 }
 
 export default App

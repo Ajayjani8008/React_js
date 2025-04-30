@@ -2,7 +2,7 @@ import envConfig from "../envConfig/envConfig.js";
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
-    client = new Client()
+    client = new Client();
     account;
     constructor() {
         this.client.setEndpoint(envConfig.appwriteUrl).setProject(envConfig.appwriteProjectId);
@@ -18,7 +18,8 @@ export class AuthService {
                 return userAccount;
             }
         } catch (error) {
-            throw error;
+             console.log("Appwrite server :: createAccount error", error);
+
         }
     }
 
@@ -26,7 +27,8 @@ export class AuthService {
         try {
             return await this.account.createEmailPasswordSession(email, password);
         } catch (error) {
-            throw error
+            console.log("Appwrite server :: login error", error);
+
         }
 
     }
@@ -36,6 +38,7 @@ export class AuthService {
             return await this.account.get();
         } catch (error) {
             console.log("Appwrite server :: getCurrentUser error", error);
+            
         }
     }
 
